@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation Live</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="leftBoxForm">
+        <form>
+            <h1>Form Validation Live</h1>
+            <table>
+                <tr>
+                    <td><label>Name:</label></td>
+                    <td colspan="5"> <input type="text" placeholder="enter your name" id="iName" name="iname"
+                            oninput="validateName()"></td>
+                </tr>
+                <tr>
+                    <td><label>Email Id:</label></td>
+                    <td colspan="5"><input type="email" placeholder="enter your email" id="iEmail" name="email"
+                            oninput="validateEmail()">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Password:</label></td>
+                    <td colspan="5"><input type="text" placeholder="enter your password" id="iPassword" name="password"
+                            oninput="validatePassword()">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Confirm password:</label></td>
+                    <td colspan="5"><input type="text" placeholder="confirm password" id="iCPassword" name="CPassword">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Phone number:</label></td>
+                    <td colspan="5"><select id="qualification" name="qualification">
+                            <option>SELECT</option>
+                            <option>B.Tech</option>
+                            <option>B.Sc</option>
+                            <option>BCA</option>
+                            <option>M.Tech</option>
+                            <option>Other</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td><label>Gender:</label></td>
+                    <td colspan="2"><label>Male</label><input type="radio" id="male" name="gender"> </td>
+                    <td colspan="2"><label>Female</label><input type="radio" id="femle" name="gender"> </td>
+                    <td colspan="2"><label>Others</label><input type="radio" id="femle" name="gender"> </td>
+                </tr>
+                <tr>
+                    <td><label>Preferred language:</label></td>
+                    <td colspan="1"><input type="checkbox" id="iCheckbox1" name="checkbox">C</td>
+                    <td colspan="1"><input type="checkbox" id="iCheckbox2" name="checkbox">C++</td>
+                    <td colspan="1"><input type="checkbox" id="iCheckbox3" name="checkbox">JAVA</td>
+                    <td colspan="1"><input type="checkbox" id="iCheckbox4" name="checkbox">PYTHON</td>
+                    <td colspan="1"><input type="checkbox" id="iCheckbox5" name="checkbox">JAVASCRIPT</td>
+                </tr>
+                <tr>
+                    <td><label>Feedback:</label></td>
+                    <td colspan="5"><textarea placeholder="enter your message" id="iMessage" name="iMessage"></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="6" id="btnContainer">
+                        <button id="btn" name="button"> SUBMIT</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div class="RightBoxValidation">
+        <div class="validationForAll">
+            <div id="validationResultForName" class="validation">
+                <div id="nameValidationMessage"></div>
+                <div id="ValidationMessage"></div>
+                <div id="ValidationMessage1"></div>
+            </div>
+            <div id="validationResultForEmail" class="validation">
+                <div id="emailValidationMessage1"></div>
+                <div id="emailValidationMessage2"></div>
+                <div id="emailValidationMessage3"></div>
+                <div id="emailValidationMessage4"></div>
+                <div id="emailValidationMessage5"></div>
+
+            </div>
+            <div id="validationResultForPassword" class="validation">
+                <div id="PasswordValidationMessage1"></div>
+                <div id="PasswordValidationMessage2"></div>
+                <div id="PasswordValidationMessage3"></div>
+                <div id="PasswordValidationMessage4"></div>
+                <div id="PasswordValidationMessage5"></div>
+            </div>
+            <div id="validationResultForCPassword" class="validation">
+                <div id="CPasswordValidationMessage1"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
