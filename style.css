@@ -4,8 +4,8 @@ body {
     display: flex;
     justify-content: center;
     gap: 50px;
-    height: fit-content;
-    /* Ensures the form is vertically centered */
+    height: 100vh; /* Ensure full viewport height */
+    margin: 0; /* Remove default margin */
 }
 
 .leftBoxForm {
@@ -17,22 +17,28 @@ body {
 
 .RightBoxValidation {
     width: 50%;
-    /* Equal width for validation box */
-    position: relative;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .validationForAll {
-    position: absolute;
-    width: 100%;
-    top: 0;
+    height: 50%;
     background-color: #f0f0f0;
-    /* Match body background */
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-size: 15px;
+    overflow: auto; /* Use auto for scrollbars */
+}
+
+.outputBox {
+    height: 50%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
+    font-size: 15px;
+    overflow: auto; /* Use auto for scrollbars */
+    color: white; /* Ensure text is visible on dark background */
 }
 
 h1 {
@@ -43,7 +49,6 @@ h1 {
 table {
     width: 100%;
     border-collapse: collapse;
-    /* Ensure table borders collapse nicely */
 }
 
 td {
@@ -75,14 +80,11 @@ button {
     border-radius: 4px;
     cursor: pointer;
     width: 100%;
-    margin: 0;
 }
 
 button:hover {
     background-color: #45a049;
 }
-
-
 
 .validation {
     margin-bottom: 10px;

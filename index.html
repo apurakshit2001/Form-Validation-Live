@@ -7,6 +7,7 @@
     <title>Form Validation Live</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script src="data.js" defer></script>
 </head>
 
 <body>
@@ -69,12 +70,13 @@
 
                 <tr>
                     <td colspan="6" id="btnContainer">
-                        <button id="btn" name="button"> SUBMIT</button>
+                        <button id="btn" name="button" onclick="getData(event)"> SUBMIT</button>
                     </td>
                 </tr>
             </table>
         </form>
     </div>
+
     <div class="RightBoxValidation">
         <div class="validationForAll">
             <div id="validationResultForName" class="validation">
@@ -101,6 +103,10 @@
                 <div id="CPasswordValidationMessage1"></div>
             </div>
         </div>
+        <div id="outputBox">
+
+        </div>
     </div>
 </body>
+
 </html>
